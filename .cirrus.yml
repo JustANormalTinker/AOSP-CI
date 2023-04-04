@@ -29,8 +29,6 @@ task:
       - ./sync # Source sync script
     build_script:
       - ./build
-    upload_script:
-      - ./upload_ccache
     upload_final_script:
       - ./upload_final
     monitor_background_script: # To monitor ccache and machine status every minute, runs in background
