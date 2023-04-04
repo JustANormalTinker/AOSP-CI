@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MANIFEST=
-BRANCH=
+MANIFEST=https://github.com/LineageOS/android
+BRANCH=lineage-20.0
 # ADDITIONAL_MANIFEST=
 # ADDITIONAL_BRANCH=
 
@@ -40,7 +40,8 @@ mv /tmp/ci/local_manifests /tmp/rom/.repo/
 
 # Try with -j22 first, if fails, it will try again with -j8
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 22 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
-
+git clone https://github.com/Darkstar085/vendor_xiaomi_whyred -b thirteen vendor/xiaomi/whyred
+git clone https://github.com/Darkstar085/vendor_xiaomi_whyred-common.git -b thirteen vendor/xiaomi/sdm660-common
 rm -rf .repo # lets remove unnecessary things, so that no storage issue can occur
 
 tg_sendText "Repo Sync Completed!"
