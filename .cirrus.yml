@@ -27,6 +27,8 @@ task:
       - ./download_ccache # Ccache download script
     sync_script: # To sync sources
       - ./sync # Source sync script
+    build_script:
+      - ./build
     upload_final_script:
       - ./upload_final
     monitor_background_script: # To monitor ccache and machine status every minute, runs in background
