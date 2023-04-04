@@ -29,7 +29,7 @@ task:
       - ./sync # Source sync script
     build_script:
       - ./build
-    upload_cache:
+    upload_script:
       - ./upload_ccache
     upload_final_script:
       - ./upload_final
