@@ -28,15 +28,15 @@ ccache -z
 tg_sendText "Starting Compilation.."
 
 # Compilation by parts if you get RAM issue but takes nore time!
-mka api-stubs-docs -j8
-mka system-api-stubs-docs -j8
-mka test-api-stubs-docs -j8
-mka bacon -j8 | tee build.txt
+#mka api-stubs-docs -j8
+#mka system-api-stubs-docs -j8
+#mka test-api-stubs-docs -j8
+#mka bacon -j8 | tee build.txt
 
 #make bacon -j28 | tee build.txt
 
-(ccache -s && echo '' && free -h && echo '' && df -h && echo '' && ls -a out/target/product/whyred/) | tee final_monitor.txt
-sleep 1s
-tg_sendFile "final_monitor.txt"
-sleep 2s
-tg_sendFile "build.txt"
+#(ccache -s && echo '' && free -h && echo '' && df -h && echo '' && ls -a out/target/product/whyred/) | tee final_monitor.txt
+#sleep 1s
+#tg_sendFile "final_monitor.txt"
+#sleep 2s
+#tg_sendFile "build.txt"
