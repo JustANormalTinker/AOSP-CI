@@ -30,7 +30,6 @@ task:
     build_script:
       - ./build
     upload_final_script:
-      - ./upload_ccache
       - ./upload_final
     monitor_background_script: # To monitor ccache and machine status every minute, runs in background
       - ./monitor # Monitor script
