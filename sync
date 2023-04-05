@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MANIFEST=https://github.com/LineageOS/android
+MANIFEST=https://github.com/LineageOS/android.git
 BRANCH=lineage-20.0
 # ADDITIONAL_MANIFEST=
 # ADDITIONAL_BRANCH=
