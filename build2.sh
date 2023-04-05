@@ -28,10 +28,10 @@ ccache -z
 tg_sendText "Starting Compilation.."
 
 # Compilation by parts if you get RAM issue but takes nore time!
-#mka api-stubs-docs -j8
-#mka system-api-stubs-docs -j8
-#mka test-api-stubs-docs -j8
-#mka bacon -j8 | tee build.txt
+mka api-stubs-docs -j8
+mka system-api-stubs-docs -j8
+mka test-api-stubs-docs -j8
+mka bacon -j8 | tee build.txt
 
 #make bacon -j28 | tee build.txt
 
