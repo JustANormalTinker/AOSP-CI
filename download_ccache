@@ -16,7 +16,7 @@ curl -s "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
 CCACHE_FILE="$CIRRUS_BRANCH""_ccache.tar.gz"
 
 mkdir -p ~/.config/rclone
-echo "$rclone_config" > ~/.config/rclone/rclone.conf # Write rclone config found from env variable, so that cloud storage can be used to upload ccache
+echo "" > ~/.config/rclone/rclone.conf # Write rclone config found from env variable, so that cloud storage can be used to upload ccache
 
 tg_sendText "Downloading Ccache"
 
@@ -37,7 +37,7 @@ tg_sendText "Downloading Ccache"
 # time aria2c $url -x16 -s50 # Using aria2c for speed haha, ccache will be at /tmp/$CCACHE_FILE
 
 # METHOD 2: Download using Google Drive direcly (I have a premium account..HAHA):
-time rclone copy aosp:$CCACHE_FILE /tmp/
+time rclone copy drive:$CCACHE_FILE /tmp/
 cd /tmp # Where ccache has been downloaded
 
 
